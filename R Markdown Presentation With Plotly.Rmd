@@ -1,0 +1,18 @@
+---
+title: "R Markdown Presentation With Plotly"
+author: "Ruixin"
+date: "May 21, 2017"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Plot With Plotly
+This graph shows the weight versus the miles per gallon of a car and the color of the marker indicated the displacement of the vehicle.
+
+```{r, echo=FALSE, message=FALSE}
+library(plotly)
+plot_ly(mtcars, x=~wt, y=~mpg, type = "scatter", color = ~disp)
+```
